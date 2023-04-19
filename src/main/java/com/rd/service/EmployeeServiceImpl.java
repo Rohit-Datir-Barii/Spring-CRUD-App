@@ -44,7 +44,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	@Override
 	public String deleteEmployee(int no) {
-                                System.out.println("Entering into deleteEmployee method");
+                  System.out.println("Entering into deleteEmployee method");
 		  empRepo.deleteById(no);
 		  return no+" emp no Employee is deleted";
 	}
