@@ -23,7 +23,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public List<Employee> getAllEmployees() {
 		return empRepo.findAll();
 	}
-
+     
+               /*
+	*This Method is used to Registering the Employes
+	*/
 	@Override
 	public String registerEmployee(Employee emp) {
 		System.out.println("Entering into the registerEmployee method");
