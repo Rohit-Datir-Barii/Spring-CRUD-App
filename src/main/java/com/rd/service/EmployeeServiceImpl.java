@@ -18,7 +18,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	@Override
 	public List<Employee> getAllEmployees() {
-		System.out.println("Entering into getAllEmployees()");
 		return empRepo.findAll();
 	}
 
@@ -45,7 +44,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 	
 	@Override
 	public String deleteEmployee(int no) {
-                  System.out.println("Entering into deleteEmployee method");
 		  empRepo.deleteById(no);
 		  return no+" emp no Employee is deleted";
 	}
