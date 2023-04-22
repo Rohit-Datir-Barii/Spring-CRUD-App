@@ -23,6 +23,7 @@ public class EmployeeController {
 
 	@GetMapping("/")
 	public String showHome() {
+		System.out.println("Entering into the showHome method");
 		return "home";
 	}
 
