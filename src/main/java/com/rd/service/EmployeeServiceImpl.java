@@ -23,6 +23,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public String registerEmployee(Employee emp) {
+		System.out.println("Entering into the registerEmployee method");
        int idVal=empRepo.save(emp).getEmpno();
 		return "Employee is saved with the id value ::"+idVal; 
 	}
