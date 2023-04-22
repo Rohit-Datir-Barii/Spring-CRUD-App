@@ -23,7 +23,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public List<Employee> getAllEmployees() {
 		return empRepo.findAll();
 	}
-
+     
+               /*
+	*This Method is used to Registering the Employes
+	*/
 	@Override
 	public String registerEmployee(Employee emp) {
 		System.out.println("Entering into the registerEmployee method");
@@ -33,10 +36,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public Employee getEmployeeByNo(int no){
-		Optional<Employee> opt=empRepo.findById(no);
-		if(opt.isEmpty())
+		Optional<Employee> optional=empRepo.findById(no);
+		if (!optional.isPresent())
 			throw new EmployeeNotFoundException(no+" emp not found");
-		return opt.get();
+		return optional.get();
 	}
 
 	@Override
