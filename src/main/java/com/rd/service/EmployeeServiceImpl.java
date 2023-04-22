@@ -16,6 +16,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired
 	private EmployeeRepository empRepo;
 	
+	/*
+	*This Method is used to fetching all the Employes
+	*/
 	@Override
 	public List<Employee> getAllEmployees() {
 		return empRepo.findAll();
